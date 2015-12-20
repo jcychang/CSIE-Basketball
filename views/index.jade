@@ -1,2 +1,27 @@
-h1= title
-p Welcome to #{title}
+doctype html
+html
+  head
+    title The Login-Animated Website Template | Home :: w3layouts
+    meta(charset='utf-8')
+    link(href='css/style.css', rel='stylesheet', type='text/css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700', rel='stylesheet', type='text/css')
+  body
+    .login-form
+      h1 Sign In
+      h2
+        a(href='#') Create Account
+      form
+        li
+          input.text(type='text', value='User Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'User Name';}")
+          a.icon.user(href='#')
+        li
+          input(type='password', value='Password', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Password';}")
+          a.icon.lock(href='#')
+        .forgot
+          h3
+            a(href='#') Forgot Password?
+          input(type='submit', onclick='myFunction()', value='Sign In')
+          a.icon.arrow(href='#')
