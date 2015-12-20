@@ -1,27 +1,32 @@
 doctype html
 html
   head
-    title The Login-Animated Website Template | Home :: w3layouts
-    meta(charset='utf-8')
-    link(href='css/style.css', rel='stylesheet', type='text/css')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    script(type='application/x-javascript').
-      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
-    link(href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700', rel='stylesheet', type='text/css')
+    meta(charset='UTF-8')
+    title Flat Login Form 3.0
+    link(rel='stylesheet', href='../stylesheets/reset.css')
+    link(rel='stylesheet prefetch', href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900')
+    link(rel='stylesheet prefetch', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='../stylesheets/style.css')
   body
-    .login-form
-      h1 Sign In
-      h2
-        a(href='#') Create Account
-      form
-        li
-          input.text(type='text', value='User Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'User Name';}")
-          a.icon.user(href='#')
-        li
-          input(type='password', value='Password', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Password';}")
-          a.icon.lock(href='#')
-        .forgot
-          h3
-            a(href='#') Forgot Password?
-          input(type='submit', onclick='myFunction()', value='Sign In')
-          a.icon.arrow(href='#')
+    .module.form-module
+      .toggle
+        i.fa.fa-times.fa-pencil
+        .tooltip Click Me
+      .form
+        h2 Login to your account
+        form
+          input(type='text', placeholder='Student ID')
+          input(type='password', placeholder='Password')
+          button Login
+      .form
+        h2 Create an account
+        form
+          input(type='text', placeholder='Student ID')
+          input(type='password', placeholder='Password')
+          button Register
+      .cta
+        a(href='#') Forgot your password?
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='../javascript/da0415260bc83974687e3f9ae.js')
+    script(src='../javascript/login.js')
+
