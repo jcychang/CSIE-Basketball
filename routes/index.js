@@ -7,23 +7,36 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req,res){
-    console.log(req);
-    var user = new Parse.User();
-    
-    user.set("username", req.body.registerID);
-    user.set("password", req.body.password);
-    
-    var email = req.body.registerID + "@csie.ntu.edu.tw";
-    user.set("email", email);
 
-    user.signUp(null, {
-        success: function(user) {
-            res.render('index', { title: 'CSIE Basketball' })
-        },
-        error: function(user, error) {
-            res.render('index', { title: 'CSIE Basketball' })
-        }
-    });
+    if (req.body.hasOwnProperty('registerSub'))
+    {
+        var user = new Parse.User();
+        user.set("username", req.body.registerID);
+        user.set("password", req.body.password);
+
+        var email = req.body.registerID + "@csie.ntu.edu.tw";
+        user.set("email", email);
+
+        user.signUp(null, {
+            success: function(user) {
+
+            },
+            error: function(user, error) {
+
+            }
+        });
+    }
+    else if (req.body.hasOwnProperty('loginSub')) {
+        Parse.User.logIn(req.body.loginID, req.body.password, {
+            success: function(user) {
+
+            },
+            error: function(user, error) {
+
+            }
+        });
+    }
+
 });
 
 module.exports = router;
