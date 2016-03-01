@@ -19,20 +19,20 @@ router.post('/', function(req,res){
 
         user.signUp(null, {
             success: function(user) {
-
+                res.redirect('/');
             },
             error: function(user, error) {
-
+                res.redirect('/');
             }
         });
     }
     else if (req.body.hasOwnProperty('loginSub')) {
         Parse.User.logIn(req.body.loginID, req.body.password, {
             success: function(user) {
-
+                res.redirect('/home');
             },
             error: function(user, error) {
-
+                res.redirect('/');
             }
         });
     }

@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  background: darkslategray;
+  opacity:0.75;
+  transition: width ease .5s;
+}
+body.open-nav .sidebar {
+  width: 100px;
+}
+body.open-nav .sidebar a {
+  font-size: 12px;
+  color: black;
+  float: right;
+}
+.sidebar a {
+  color: #182828;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color ease .35s, border-bottom-color ease .35s;
+  font-size: 0;
+  color: transparent; 
+}
+.sidebar a img {
+  width: 100%;
+}
+.sidebar a.open {
+  border: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.cf {
+  position:relative;
+}
+.cf img.top{
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  -o-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+.cf img.top:hover {
+  opacity:0;
+}
+
+.maincontent {
+  background-color: rgba(255, 255, 255, 0.25);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: 50px;
+  transition: margin-left ease .5s;
+}
+body.open-nav .maincontent {
+  margin-left: 100px;
+}

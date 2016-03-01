@@ -7,7 +7,32 @@ html
     link(rel='stylesheet prefetch', href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900')
     link(rel='stylesheet prefetch', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='../stylesheets/style.css')
+    link(rel='stylesheet', href='../stylesheets/universal.css')
   body
-    script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js')
-    script(src='../javascripts/login.js')
+    #container.sidebar
+      #container.center
+        a(class='button', href='#')
+          #container.cf
+            img(class="bottom" src='../images/dark/appbar.home.empty.png')
+            img(class="top" src='../images/light/appbar.home.empty.png')
+        a(class='button', href='#')
+          #container.cf
+            img(class="bottom" src='../images/dark/appbar.calendar.png')
+            img(class="top" src='../images/light/appbar.calendar.png')
+        a(class='button', href='#')
+          #container.cf
+            img(class="bottom" src='../images/dark/appbar.graph.line.png')
+            img(class="top" src='../images/light/appbar.graph.line.png')
+        a(class='button', href='#')
+          #container.cf
+            img(class="bottom" src='../images/dark/appbar.information.circle.png')
+            img(class="top" src='../images/light/appbar.information.circle.png')
+        a(class='open', href='#')
+          #container.cf
+            img(class="bottom" src='../images/dark/appbar.arrow.right.left.png')
+            img(class="top" src='../images/light/appbar.arrow.right.left.png')
+    #container.maincontent
+      p
+  script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js')
+  script(src='../javascripts/home.js')
