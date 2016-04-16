@@ -1,6 +1,3 @@
-GLOBAL.Parse = require('parse/node').Parse;
-Parse.initialize("7Bfs3DjfQ7iPYJhg3vy0hKPf1n7xHwp7Ibq8qzOI", "jKVyO1bQFcj62shLneClSTWrEQt9IRGly5HL0Scc");
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
