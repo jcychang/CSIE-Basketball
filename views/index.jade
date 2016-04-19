@@ -4,26 +4,15 @@ html
 		meta(charset='UTF-8')
 		title CSIE Basketball
 		link(rel='stylesheet', href='../stylesheets/reset.css')
-		link(rel='stylesheet prefetch', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
 		link(rel='stylesheet', href='../stylesheets/style.css')
 	body
 		.module.form-module
-			.toggle
-				i.fa.fa-times.fa-pencil
 			.form
-				h2 Login to your account
+				h2 login to csie basketball
 				form(method='post', action='')
-					input(type='text', name='loginID', placeholder='Student ID')
-					input(type='password', name='password', placeholder='Password')
-					button(type='submit', name='loginSub') Submit
-			.form
-				h2 Create an account
-				form(method='post', action='')
-					input(type='text', name='registerID', placeholder='Student ID')
-					input(type='password', name='password', placeholder='Password')
-					button(type='submit', name='registerSub') Submit
+					input(type='text', name='loginID', placeholder='student ID')
+					input(type='password', name='password', placeholder='password')
+					button(type='submit', name='loginSub') submit
 			.cta
-				a(href='#') Forgot your password?
+				a(href='#') forgot your password?
 		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js')
-		//- script(src='https://cdn.firebase.com/js/client/2.4.2/firebase.js')
-		script(src='../javascripts/login.js')
